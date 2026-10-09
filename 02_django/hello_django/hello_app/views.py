@@ -5,4 +5,11 @@ from django.http import HttpResponse
 
 
 def print_hello(request):
-    return HttpResponse("Hello Django")
+    movie_details = {
+        'title' : 'Interstellar',
+        'year' : 2012,
+        'summary' : 'Story of cooper',
+        'sucess' : False
+    }
+    return render(request, "hello.html", movie_details)
+    # return HttpResponse("")
