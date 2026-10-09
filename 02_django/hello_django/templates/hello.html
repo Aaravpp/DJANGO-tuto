@@ -1,8 +1,13 @@
-<h1>Title : {{title}}</h1>
-<p>Summary : {{summary}}</p>
-<h4>Year : {{year}}</h4>
-{% if sucess %}
+{% for movie_obj in movies%}
+
+
+
+<h1>Title : {{movie_obj.title | upper}}</h1>
+<p>Summary : {{movie_obj.summary | default:'DO NOT TALK ABOUT FIGHT CLUB'}}</p>
+<h4>Year : {{movie_obj.year}}</h4>
+{% if movie_obj.sucess %}
 <p>Movie was a sucess at that time</p>
 {% else %}
 <p>Movie was a Failer</p>
 {% endif%}
+{% endfor %}
