@@ -4,6 +4,11 @@ from django.shortcuts import render
 
 
 def create(request):
+    if request.POST:
+        print(request.POST)
+        print(request.POST.get('title'))
+        print(request.POST.get('year'))
+        print(request.POST.get('summary'))
     return render(request, 'create.html')
 
 
