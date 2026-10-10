@@ -7,14 +7,14 @@
 {% for movie_obj in movies%}
 
 <h1>Title : {{movie_obj.title | upper}}</h1>
-<img src="{% static 'images/' %}{{movie_obj.img}}" alt="">
-<p>Summary : {{movie_obj.summary | default:'DO NOT TALK ABOUT FIGHT CLUB'}}</p>
+<!-- <img src="{% static 'images/' %}{{movie_obj.img}}" alt=""> -->
+<p>Summary : {{movie_obj.description | default:'DO NOT TALK ABOUT FIGHT CLUB'}}</p>
 <h4>Year : {{movie_obj.year}}</h4>
-{% if movie_obj.sucess %}
+<!-- {% if movie_obj.sucess %}
 <p>Movie was a sucess at that time</p>
 {% else %}
 <p>Movie was a Failer</p>
-{% endif%}
+{% endif%} -->
 {% endfor %}
 
 {% endblock %}
