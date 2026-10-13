@@ -14,3 +14,6 @@ def products(request):
         "products.html",
         {"products": product_list}
     )
+
+def product_details(request, product_id):
+    return HttpResponse(f"Product id : {product_id}")
